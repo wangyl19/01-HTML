@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+<!--
+1,什么是表单?
+表单就是专门用来收集用户信息的
+
+2,什么是表单元素
+表单元素:每一种表单标签都有特殊的外观和默认的功能
+
+3,表单的格式
+<form>
+    <表单元素>
+</form>
+
+4,常见表单元素
+input标签,有一个type属性,这个属性有很多类型的取值,不同的取值就决定了input标签的外观和功能
+
+-->
+<form action="http://www.baidu.com">
+    <!--明文输入框-->
+    帐号:<input type="text" name="aa"><br>
+    <!--暗文输入框-->
+    密码:<input type="password" name="bb"><br>
+    <!--输入框默认值-->
+    明文默认值:<input type="text" value="wxl"><br>
+    暗文默认值:<input type="password" value="wxl520"><br>
+
+    <!--单选框:必须设置相同的name值,默认选择项需要添加checked属性-->
+    <!--在html中如何属性名和值一样,可以只写一个,企业开发中,不推荐省略-->
+    性别:
+    <input type="radio" name="sex">男
+    <input type="radio" name="sex">女
+    <input type="radio" name="sex" checked="checked">保密<br>
+
+    <!--多选框-->
+    爱好:
+    <input type="checkbox" checked>篮球
+    <input type="checkbox">足球
+    <input type="checkbox" checked>棒球
+    <input type="checkbox">足浴<br>
+
+    <!--按钮:配合JS完成一些操作-->
+    <input type="button" value="按钮" onclick="alert('ok')">
+    <!--图片按钮-->
+    <input type="image" src="picture1.jpg" onclick="alert('ok')" width="30px"><br>
+    <!--重置按钮:清空表单中的数据-->
+    <input type="reset">
+    <!--提交按钮-->
+    <input type="submit">
+    
+    <!--隐藏域-->
+    <input type="hidden">
+</form>
+
+</body>
+</html>

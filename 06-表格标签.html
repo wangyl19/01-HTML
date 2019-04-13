@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+</head>
+<body>
+<h2 align="center">表格1</h2>
+<table border="1px" width="60%" align="center">
+    <tr align="center">
+        <td>1.1</td>
+        <td>1.2</td>
+        <td>1.3</td>
+    </tr>
+    <tr align="center">
+        <td>2.1</td>
+        <td>2.2</td>
+        <td>2.3</td>
+    </tr>
+</table>
+<hr>
+
+<!--
+caption作用用于指定表格的标题
+thead作用:指定表头信息
+tbody作用:指定主体信息
+tfoot作用:指定附加信息
+-->
+<table width="60%" align="center" bgcolor="black">
+    <caption>
+        <h2>细线表格</h2>
+    </caption>
+    <thead>
+        <tr  bgcolor="white">
+            <th>头1</th>
+            <th>头2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr align="center" bgcolor="white">
+            <td>1.1</td>
+            <td>1.2</td>
+        </tr>
+        <tr align="center" bgcolor="white">
+            <td>2.1</td>
+            <td>2.2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr align="center" bgcolor="white">
+            <td>尾1</td>
+            <td>尾2</td>
+        </tr>
+    </tfoot>
+</table>
+<hr>
+<table border="1px" align="center" width="60%" height="130px">
+    <caption>
+        <h2>单元格合并</h2>
+    </caption>
+    <tr>
+        <td colspan="2"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td rowspan="2"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>

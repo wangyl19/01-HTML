@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a标签</title>
+    <!--base标签指定所有超链接的打开方式,局部>全局-->
+    <base target="_blank">
+</head>
+<body>
+<!--
+a标签的作用: 就是用于控制页面与页面之间的跳转的
+a标签不仅可以让文字能够点击,还可以让图片能够点击
+a标签的href属性,可以指定网络资源,也可以指定本地资源
+a标签的target属性,指定跳转的位置    _blank表示在新的选项卡中打开
+a标签可以跳转到指定网页的指定锚点位置上#
+-->
+<a href="http://news.baidu.com/">新闻</a>
+<a href="https://www.taobao.com/"><img src="picture1.jpg" width="40"></a>
+<a href="02-H,P,HR标签.html">02-H,P,HR标签.html</a>
+<a href="03-img标签,br标签.html" target="_self">03-img标签,br标签.html</a>
+<!--假链接
+    #会回到顶部
+    javascript:不会回到顶部
+-->
+<a href="#" target="_self">假链接</a>
+<a href="javascript:" target="_self">假链接</a>
+
+</body>
+</html>

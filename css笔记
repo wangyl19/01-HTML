@@ -1,0 +1,212 @@
+CSS
+1、css的简介
+	* css： 层叠样式表
+		** 层叠：一层一层的
+		** 样式表：
+			很多的属性和属性值
+	* 是页面显示效果更加好
+	* CSS将网页内容和显示样式进行分离，提高了显示功能。
+
+2、css和html的结合方式（四种结合方式）
+	（1）在每个html标签上面都有一个属性 style，把css和html结合在一起
+		- <div style="background-color:red;color:green;">
+
+	（2）使用html的一个标签实现 <style>标签，写在head里面
+		* <style type="text/css">
+			css代码;
+		</style>
+
+		*   <style type="text/css">
+			div {
+				background-color:blue;
+				color: red;
+			}
+		 </style>
+
+	（3）使用头标签 link，引入外部css文件
+		- 第一步 ，创建一个css文件
+		- <link rel="stylesheet" type="text/css" href="css文件的路径" />
+
+	*** 优先级（一般情况）
+		由上到下，由外到内。优先级由低到高。
+		*** 后加载的优先级高
+
+	*** 格式  选择器名称 { 属性名：属性值；属性名：属性值；…….}
+
+3、css的基本选择器（三种）
+	** 要对哪个标签里面的数据进行操作
+
+	（1）标签选择器
+		* 使用标签名作为选择器的名称
+			div {
+
+				background-color:gray;
+
+				color:white;
+			}
+
+	（2）class选择器
+		* 每个html标签都有一个属性 class
+		- <div class="haha">aaaaaaa</div>
+		- .haha {
+			background-color: orange;
+		 }
+
+	（3）id选择器
+		* 每个html标签上面有一个属性 id
+		- <div id="hehe">bbbbb</div>
+		- #hehe {
+			background-color: #333300;
+		}
+	*** 优先级
+		style > id选择器 > class选择器 > 标签选择器
+
+4、css的扩展选择器
+	（1）关联选择器
+		* <div><p>wwwwwwww</p></div>
+		* 设置div标签里面p标签的样式，嵌套标签里面的样式
+		* div p {
+			background-color: green;
+		}
+
+	（2）组合选择器
+		* <div>1111</div>
+		  <p>22222</p>
+		* 把div和p标签设置成相同的样式，把不同的标签设置成相同的样式
+		* div,p {
+			background-color: orange;
+		}
+
+	（3）伪元素选择器(了解，浏览器的兼容性比较差)
+		* css里面提供了一些定义好的样式，可以拿过来使用
+		* 比如超链接
+			** 超链接的状态
+			原始状态   鼠标放上去状态  点击           点击之后
+			 :link         :hover        :active        :visited
+
+			 ** 记忆的方法
+				lv  ha
+
+5、css的盒子模型
+	** 在进行布局前需要把数据封装到一块一块的区域内（div）
+	（1）边框
+		border: 2px solid blue;
+		border：统一设置
+		上 border-top
+		下 border-bottom
+		左 border-left
+		右 border-right
+
+	（2）内边距
+		padding:20px;
+		使用padding统一设置
+		也可以分别设置
+		上下左右四个内边距
+
+	（3）外边距
+		margin: 20px;
+		可以使用margin统一设置
+		也可以分别设置
+		上下左右四个外边距
+
+6、css的布局的漂浮(了解)
+	float：
+		** 属性值
+		left  :　 文本流向对象的右边
+		right  :　 文本流向对象的左边
+
+7、css的布局的定位（了解）
+	position：
+		** 属性值
+			- absolute ：
+				 *** 将对象从文档流中拖出
+				 *** 可以是top、bottom等属性进行定位
+			- relative ：
+				*** 不会把对象从文档流中拖出
+				*** 可以使用top、bottom等属性进行定位
+
+8、案例 图文混排案例
+	** 图片和文字在一起显示
+
+9、案例 图像签名
+	** 在图片上面显示文字
+
+10、上午内容总结
+	1、css和html的四种结合方式（****）
+
+	2、css的基本选择器（****）
+		* 标签选择器 使用标签名
+		* class选择器 .名称
+		* id选择器  #名称
+
+		** 优先级
+			style > id > class > 标签
+
+	3、css的扩展选择器(了解)
+		* 关联选择器
+			- 设置嵌套标签的样式  div p {}
+		* 组合选择器
+			- 不同的标签具有相同的样式 div,p{}
+		* 伪元素选择器
+			* 超链接的状态
+				- 原始 :link
+				- 悬停 :hover
+				- 点击 :active
+				- 点击之后 :visited
+
+	4、盒子模型(了解)
+		* 边框 border:2px solid red;
+		上下左右  border-top  border-bottom  border-left  border-right
+
+		* 内边距 padding:20px
+		上下左右
+
+		* 外边距 margin:20px
+		上下左右
+
+		* 对数据进行操作，需要把数据放到一个区域里面（div）
+
+	5、布局的漂浮(了解)
+		float
+			- left: 后面的div到右边
+			- right：后面的div到左边
+
+	6、布局的定位(了解)
+		position
+			- absolute
+				** 从文档流中拖出
+			- relative
+				** 不会从文档流中拖出
+
+一般在目录里面，标出符号
+	（********）：重点，代码看懂，代码会写，代码理解
+		- （****重点中的重点***）
+	（了解）：代码看懂
+	（理解）：能够把原理讲清楚
+
+CSS三大特性
+1.继承性:给父元素设置一些属性,子元素也可以使用,这个我们就称之为继承性
+    注意点:只有以color/font-/text-/line开头的属性才可以继承,并且只要是后代都可以继承.
+2.层叠性:css处理冲突的一种能力
+    注意点:只有在多个选择器选中"同一个标签",然后又设置了相同的属性,才会发生层叠性.
+3.优先级:直接优于间接(继承),id>类>标签>通配符>继承>浏览器默认
+    注意点:优先级可以提升: 在属性后面 !important 可以把该属性优先级提升为最高
+
+div和span
+    div一般用于配合css完成网页的基本布局
+    span一般用于配合css修改网页中的一些局部信息
+    div会单独占据一行,span不会单独占据一行
+    div是一个容器级的标签,而span是一个文本级的标签
+在HTML中将所有标签分为两类:容器级/文本级
+    容器级的标签可以嵌套其他所有标签 div h ul ol dl li....
+    文本级的标签中只能嵌套文字/超链接/图片    span p ...
+在CSS中也将所有标签分为两类:块级元素和行内元素
+    文本级标签中除了p标签其他都是块级元素,
+    容器级标签都是块级元素+个p标签
+    块级元素独占一行,可以设置宽高
+    行内元素不会独占一行,不可以设置宽高
+  行内块级元素:img
+    转换:设置display属性值
+        inline 转换为行内元素
+        block   转换为块级元素
+        inline-block 转换为行内块级
